@@ -4,6 +4,320 @@
   font-weight: normal;
   font-style: normal; }
 
-body h1 {
-  color: black;
-  font-family: "alright-sans", sans-serif; }
+@font-face {
+  font-family: 'alright-sans';
+  src: url("../../assets/fonts/alright-sans/AlrightSans-Bold.otf");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'tiempos-headline';
+  src: url("../../assets/fonts/tiempos-headline/TiemposHeadline-Light.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'tiempos-headline';
+  src: url("../../assets/fonts/tiempos-headline/TiemposHeadline-Bold.otf");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'tiempos-headline';
+  src: url("../../assets/fonts/tiempos-headline/TiemposHeadline-Medium.otf");
+  font-weight: 400;
+  font-style: normal; }
+
+html {
+  max-width: 600px; }
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+
+.template-top-wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: column; }
+
+.template-bottom-wrapper {
+  display: flex;
+  flex-flow: column;
+  background-color: #f7f8f9;
+  width: 100%;
+  height: auto; }
+
+.content-wrapper {
+  padding-left: 7.5%;
+  padding-right: 7.5%; }
+
+.verticle-content-wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.inner-content-left {
+  height: auto;
+  width: 30%; }
+
+.inner-content-right {
+  height: auto;
+  width: 70%; }
+  .inner-content-right h3 {
+    position: relative;
+    font-size: 1.25rem;
+    font-family: "tiempos-headline", "times-new-roman";
+    font-weight: bold;
+    margin: 1rem 0; }
+  .inner-content-right p {
+    font-family: "alright-sans", sans-serif;
+    margin-top: 1rem; }
+    .inner-content-right p span {
+      color: #ec5447; }
+
+a {
+  text-decoration: none; }
+
+.body-link-text {
+  text-transform: uppercase;
+  font-family: "alright-sans", sans-serif;
+  font-size: 0.75rem;
+  color: #60cbe2; }
+
+.body-text {
+  color: #bcb5b9; }
+
+.template-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 3rem;
+  height: auto;
+  max-width: 100%; }
+  .template-header a {
+    text-decoration: none;
+    color: #FF3930;
+    font-size: 0.75rem;
+    height: 0.75rem; }
+
+.header-link-text {
+  font-family: "alright-sans", sans-serif;
+  text-decoration: none; }
+
+.main-heading {
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  max-width: 100%; }
+
+.main-heading-left {
+  width: 50%; }
+  .main-heading-left h1 {
+    font-size: 1.75rem;
+    font-family: "tiempos-headline", "times-new-roman"; }
+  .main-heading-left p {
+    font-family: "alright-sans", sans-serif;
+    color: #bcb5b9;
+    margin: 0.25rem; }
+
+.main-heading-right {
+  width: 50%; }
+  .main-heading-right img {
+    width: 100%;
+    height: auto; }
+
+.hero-banner-wrapper {
+  display: flex;
+  max-width: 100%;
+  height: auto; }
+  .hero-banner-wrapper img {
+    align-self: flex-end;
+    max-width: 100%;
+    height: auto; }
+
+.featured-blog-post {
+  display: flex;
+  margin: 0 7.5%;
+  background-color: #FFFFFF;
+  height: auto; }
+
+.action-tips {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: auto;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ECEEF0; }
+  .action-tips h2 {
+    font-size: 1.5rem;
+    font-family: "tiempos-headline", "times-new-roman";
+    font-weight: normal; }
+  .action-tips p {
+    font-family: "alright-sans", sans-serif;
+    text-align: center;
+    margin: 1rem 0; }
+
+.action-box {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #FFFFFF;
+  margin-bottom: 1rem;
+  border: 1px solid #ECEEF0; }
+  .action-box .action-content {
+    font-family: "alright-sans", sans-serif;
+    padding-left: 0.25rem; }
+    .action-box .action-content h4 {
+      font-size: 0.85rem;
+      font-weight: bold; }
+    .action-box .action-content p {
+      font-size: 0.75rem;
+      text-align: left;
+      color: #bcb5b9; }
+    .action-box .action-content a {
+      text-transform: uppercase;
+      color: #60cbe2;
+      font-size: 0.75rem; }
+
+.action-image {
+  display: flex;
+  justify-content: center; }
+
+.fav-blog-posts {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+  .fav-blog-posts h2 {
+    font-size: 1.5rem;
+    font-family: "tiempos-headline", "times-new-roman";
+    font-weight: normal; }
+  .fav-blog-posts p {
+    font-family: "alright-sans", sans-serif;
+    text-align: center;
+    margin: 1rem 0; }
+
+.blog-card-wrapper {
+  display: flex;
+  flex-flow: column nowrap; }
+  @media (min-width: 541px) {
+    .blog-card-wrapper {
+      flex-flow: row nowrap;
+      justify-content: space-between; } }
+
+.blog-card {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #FFFFFF;
+  margin-top: 1rem; }
+  .blog-card img {
+    width: 100%;
+    height: auto; }
+  @media (min-width: 541px) {
+    .blog-card {
+      width: 48%; } }
+
+.blog-card-info a {
+  text-transform: uppercase;
+  font-family: "alright-sans", sans-serif;
+  color: #60cbe2;
+  font-size: 10px; }
+
+.blog-card-info h3 {
+  font-size: 16px;
+  font-family: "tiempos-headline", "times-new-roman";
+  margin-top: 1rem; }
+
+.blog-card-info p {
+  font-size: 12px;
+  text-align: left;
+  color: #bcb5b9; }
+
+.prefooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #ec5447;
+  color: #FFFFFF;
+  text-align: center; }
+  .prefooter p {
+    font-family: "alright-sans", sans-serif; }
+    .prefooter p a {
+      color: #FFFFFF; }
+
+.page-footer {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 320px;
+  width: 100%; }
+
+.footer-top {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  border-bottom: 1px solid #ECEEF0; }
+
+.footer-bottom {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 230px;
+  padding: 1rem 0; }
+  .footer-bottom span {
+    display: flex; }
+  .footer-bottom p {
+    text-align: center; }
+
+/* 
+  slightly modified meyer reset care of:
+
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.25; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
