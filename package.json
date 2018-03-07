@@ -1,0 +1,26 @@
+{
+  "name": "redstamp-technical-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmclean85/redstamp-technical-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmclean85/redstamp-technical-test/issues"
+  },
+  "homepage": "https://github.com/tmclean85/redstamp-technical-test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
