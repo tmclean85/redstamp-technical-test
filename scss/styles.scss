@@ -1,7 +1,6 @@
-body {
-  background-color: red;
-  
-  h1 {
-    color: white;
-  }
-}
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/fonts";
+@import "partials/main";
+
+
