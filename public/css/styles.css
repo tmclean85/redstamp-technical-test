@@ -1,4 +1,9 @@
-body {
-  background-color: red; }
-  body h1 {
-    color: white; }
+@font-face {
+  font-family: 'alright-sans';
+  src: url("../../assets/fonts/alright-sans/AlrightSans-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+body h1 {
+  color: black;
+  font-family: "alright-sans", sans-serif; }
