@@ -1,7 +1,9 @@
 $font__main: 'alright-sans', sans-serif;
-$font__heading_main: 'tiempos-headline', 'times-new-roman';
+$font__heading_main: 'tiempos-headline', Times, serif;
+$font__heading_text: 'tiempos-text', Times, serif;
 
 $color__text_gray: #bcb5b9;
+$color__text_dark_gray: #85939E;
 $color__text_orange: #ec5447;
 $color__text_teal: #60cbe2;
 $color__border_gray: #ECEEF0;
