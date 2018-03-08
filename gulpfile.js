@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 
-// Static Server + scss/html watchers
+// static server + scss/html watchers
 gulp.task('serve', function() {
 
   browserSync.init({
@@ -13,7 +13,7 @@ gulp.task('serve', function() {
   gulp.watch("public/*.html").on('change', browserSync.reload);
 });
 
-// Compile sass & sync with browser
+// compile sass & sync with browser
 gulp.task('sass', function() {
   return gulp.src("scss/styles.scss")
     .pipe(sass().on('error', sass.logError))
