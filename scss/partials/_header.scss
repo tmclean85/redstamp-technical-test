@@ -1,0 +1,65 @@
+// header styles
+
+.template-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 3rem;
+  height: auto;
+  max-width: 100%;
+  a {
+    text-decoration: none;
+    color: #FF3930;
+    font-size: 10px;
+    height: 0.75rem;
+  }
+}
+
+.header-link-text {
+  font-family: $font__main;
+  text-decoration: none;
+  margin: 0;
+}
+
+// main heading
+
+.main-heading {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 100%;
+  @include fullWidthMain {
+    flex-flow: row nowrap;
+  }
+}
+
+.main-heading-left {
+  width: 100%;
+  text-align: center;
+  h1 {
+    font-size: 44px;
+    font-family: $font__heading_text;
+    color: #0a273c;
+  }
+  p {
+    font-family: $font__main;
+    font-size: 14px;
+    color: $color__text_gray;
+    margin: 0.25rem;
+    margin-top: 0.75rem;
+  }
+  @include fullWidthMain {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+.main-heading-right {
+  width: 50%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

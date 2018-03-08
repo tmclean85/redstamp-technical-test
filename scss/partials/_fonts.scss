@@ -14,7 +14,14 @@
   font-style: normal;
 }
 
-// tiempos
+@font-face {
+  font-family: 'alright-sans';
+  src: url('../../assets/fonts/alright-sans/AlrightSans-Light.otf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+// tiempos headline
 
 @font-face {
   font-family: 'tiempos-headline';
@@ -34,5 +41,21 @@
   font-family: 'tiempos-headline';
   src: url('../../assets/fonts/tiempos-headline/TiemposHeadline-Medium.otf');
   font-weight: 400;
+  font-style: normal;
+}
+
+// tiempos text
+
+@font-face {
+  font-family: 'tiempos-text';
+  src: url('../../assets/fonts/tiempos-text/TiemposText-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tiempos-text';
+  src: url('../../assets/fonts/tiempos-text/TiemposText-Medium.otf');
+  font-weight: 500;
   font-style: normal;
 }

@@ -8,6 +8,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .template-top-wrapper {
@@ -44,16 +45,35 @@ body {
   width: 70%;
   h3 {
     position: relative;
-    font-size: 1.25rem;
+    font-size: 18px;
+    color: #0a273c;
     font-family: $font__heading_main;
-    font-weight: bold;
+    font-weight: 400;
     margin: 1rem 0;
   }
   p {
     font-family: $font__main;
+    font-size: 14px;
     margin-top: 1rem;
     span {
-      color: $color__text_orange;
+      a {
+        color: $color__text_orange;
+      }
+    }
+  }
+  div {
+    position: absolute;
+    left: -84px;
+    top: 50%;
+    bottom: 50%;
+    border-bottom: 2px solid $color__text_gray;
+    width: 64px;
+    @include fullWidthFooter {
+      left: -112px;
+    }
+    @include tractionLineNarrow {
+      width: 48px;
+      left: -64px;
     }
   }
 }
@@ -62,70 +82,34 @@ a {
   text-decoration: none;
 }
 
+// media hiders
+
+.hidden-wide {
+  display: initial;
+  @include fullWidthMain {
+    display: none;
+  }
+}
+
+.hidden-narrow {
+  display: none;
+  @include fullWidthMain {
+    display: initial;
+  }
+}
+
 // body link/text style
 
 .body-link-text {
   text-transform: uppercase;
   font-family: $font__main;
-  font-size: 0.75rem;
+  font-weight: bold;
+  font-size: 10px !important;
   color: $color__text_teal;
 }
 
 .body-text {
   color: $color__text_gray;
-}
-
-// header styles
-
-.template-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  min-height: 3rem;
-  height: auto;
-  max-width: 100%;
-  a {
-    text-decoration: none;
-    color: #FF3930;
-    font-size: 0.75rem;
-    height: 0.75rem;
-  }
-}
-
-.header-link-text {
-  font-family: $font__main;
-  text-decoration: none;
-}
-
-// main heading
-
-.main-heading {
-  display: flex;
-  flex-flow: row nowrap;
-  height: auto;
-  max-width: 100%;
-}
-
-.main-heading-left {
-  width: 50%;
-  h1 {
-    font-size: 1.75rem;
-    font-family: $font__heading_main;
-  }
-  p {
-    font-family: $font__main;
-    color: $color__text_gray;
-    margin: 0.25rem;
-  }
-}
-
-.main-heading-right {
-
-  width: 50%;
-  img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 // hero banner section
@@ -159,16 +143,21 @@ a {
   height: auto;
   margin-top: 1rem;
   border-bottom: 1px solid $color__border_gray;
-  h2 {
-    font-size: 1.5rem;
-    font-family: $font__heading_main;
-    font-weight: normal;
-  }
-  p {
-    font-family: $font__main;
-    text-align: center;
-    margin: 1rem 0;
-  }
+}
+
+.body-heading {
+  font-size: 25px;
+  font-family: $font__heading_text;
+  font-weight: 500;
+  color: #0a273c;
+  text-align: center;
+}
+
+.body-sub-heading {
+  font-family: $font__main;
+  font-size: 14px;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .action-box {
@@ -181,6 +170,7 @@ a {
     font-family: $font__main;
     padding-left: 0.25rem;
     h4 {
+      color: #0a273c;
       font-size: 0.85rem;
       font-weight: bold;
     }
@@ -200,6 +190,9 @@ a {
 .action-image {
   display: flex;
   justify-content: center;
+  @include fullWidthFooter {
+    justify-content: flex-start;
+  }
 }
 
 // favourite blog posts section
@@ -208,22 +201,12 @@ a {
   display: flex;
   flex-flow: column;
   align-items: center;
-  h2 {
-    font-size: 1.5rem;
-    font-family: $font__heading_main;
-    font-weight: normal;
-  }
-  p {
-    font-family: $font__main;
-    text-align: center;
-    margin: 1rem 0;
-  }
 }
 
 .blog-card-wrapper {
   display: flex;
   flex-flow: column nowrap;
-  @include tablet {
+  @include fullWidthMain {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
@@ -238,27 +221,26 @@ a {
     width: 100%;
     height: auto;
   }
-  @include tablet {
+  @include fullWidthMain {
     width: 48%;
   }
 }
 
 .blog-card-info {
-  a {
-    text-transform: uppercase;
-    font-family: $font__main;
-    color: $color__text_teal;
-    font-size: 10px;
-  }
+  padding: 10px;
   h3 {
     font-size: 16px;
+    color: #0a273c;
     font-family: $font__heading_main;
-    margin-top: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
   }
   p {
     font-size: 12px;
+    font-family: $font__main;
     text-align: left;
     color: $color__text_gray;
+    line-height: 18px;
   }
 }
 
@@ -266,46 +248,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  min-height: 50px;
+  height: auto;
   background-color: $color__text_orange;
   color: #FFFFFF;
   text-align: center;
   p {
+    font-size: 14px;
     font-family: $font__main;
+    font-weight: 200;
     a {
       color: #FFFFFF;
+      font-weight: 600;
     }
-  }
-}
-
-.page-footer {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 320px;
-  width: 100%;
-}
-
-.footer-top {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
-  width: 100%;
-  border-bottom: 1px solid $color__border_gray;
-}
-
-.footer-bottom {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 230px;
-  padding: 1rem 0;
-  span {
-    display: flex;
-  }
-  p {
-    text-align: center;
   }
 }
